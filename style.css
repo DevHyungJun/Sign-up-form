@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Myeongjo:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@100&family=Nanum+Myeongjo:wght@800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Hahmlet', serif;
+  font-family: 'Nanum Myeongjo', serif;
+  line-height: 2.5rem;
+  background-color: #e8e6f1;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg,
+.main {
+  position: absolute;
+}
+
+.bg {
+  width: 40%;
+  background-image: url('https://images.unsplash.com/photo-1531315630201-bb15abeb1653?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.main {
+  width: 60%;
+  background-color: #e8e6f1;
+  height: 100vh;
+  right: 0;
+  padding-left: 2rem;
+}
+
+.main-p>p {
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo{
+  background-image: url('https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  margin: auto;
+  margin-top: 25rem;
+  opacity: 0.5;
+}
+
+.logo-p {
+  position: relative;
+  top: 120px;
+  text-align: center;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 40px;
+  color: black;
+}
+
+.bg-from {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  margin-top: 100px;
+}
+
+.input-groups-container {
+  display: flex;
+  padding: 10px;
+}
+
+.input-group:nth-of-type(1) {
+  margin-right: 3rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-style: italic;
+  color: rgb(163, 163, 1);
+}
+
+input {
+  width: 15rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  padding: 5px;
+}
+
+.center {
+  position: relative;
+  margin-top: 500px;
+}
+
+.submit-button {
+  margin-left: 26px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(227, 227, 2);
+  color: black;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Nanum Myeongjo', serif;
+}
+.submit-button:hover {
+  background-color: rgb(155, 155, 5);
+  transition: all 0.3s;
+}
+.login-check {
+  margin-left: 26px;
+}
+
+.error {
+  background-color: rgb(154, 3, 3);
+  border-radius: 8px;
+  color: white;
+  display: none;
+}
+.error>p {
+  padding: 15px;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .container,
+  .bg,
+  .main {
+    position: static;
+    display: block
+  }
+
+  .bg,
+  .main {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .input-groups-container {
+    flex-direction: column;
+  }
+
+  input {
+    height: 1.7rem;
+  }
+
+  .center,
+  .main-p>p {
+    margin-top: 0;
+  }
+
+  .main{padding-left: 0;}
+
+  .logo {
+    margin-top: 0;
+    width: 20rem;
+    height: 20rem;
+  }
+  .logo-p {
+    font-size: 2.5rem;
+  }
+  .bg {
+    padding-top: 15rem;
+  }
+
+  .bg-from {
+    top: 63px;
+    left: 187px;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  body {
+    background-color: #252525;
+  }
+  
+  .main {
+    background-color: #252525;
+    color: rgb(174, 170, 170);
+  }
+
+  label {
+    color: rgb(164, 83, 25);
+  }
+}
+
+fieldset {border: none;}
+
+input:valid {
+  border: 3px solid yellow;
+}
+input:invalid {
+  border: 3px solid red
+}
